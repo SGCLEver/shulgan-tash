@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Шульган-Таш</title>
+<meta name="description" content="Офлайн-гид по поездке в Шульган-Таш 2-3 октября 2026: Капова пещера, тропы, быт, одежда.">
+<meta name="theme-color" content="#F4F1EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15130F" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Шульган-Таш">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<script>
+  try { var t = localStorage.getItem('st-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch(e){}
+</script>
+
+<style>
+:root{
+  --bg:#F4F1EA;
+  --surface:#FCFAF6;
+  --surface-2:#ECE6DB;
+  --ink:#26221D;
+  --muted:#756D62;
+  --hair:#E3DDD2;
+  --hair-2:#D3CBBE;
+  --ochre:#A4532B;
+  --ochre-bg:#F4E4D8;
+  --forest:#3F6250;
+  --forest-bg:#E1EAE3;
+  --lake:#2F6F86;
+  --lake-bg:#DEEBEF;
+  --shadow:0 1px 2px rgba(38,34,29,.04),0 6px 18px rgba(38,34,29,.05);
+  --bar:rgba(244,241,234,.92);
+  --r:14px;
+  --f-head:"Iowan Old Style","Charter",Georgia,"Times New Roman",serif;
+  --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-mono:ui-monospace,"SF Mono",Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15130F; --surface:#1F1C17; --surface-2:#29251E; --ink:#ECE6DC;
+    --muted:#A0978A; --hair:#34302A; --hair-2:#453F36;
+    --ochre:#DE8A5E; --ochre-bg:#33241B; --forest:#8DB59F; --forest-bg:#1E2B24;
+    --lake:#7DB9CF; --lake-bg:#18282E;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.3);
+    --bar:rgba(21,19,15,.92);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15130F; --surface:#1F1C17; --surface-2:#29251E; --ink:#ECE6DC;
+  --muted:#A0978A; --hair:#34302A; --hair-2:#453F36;
+  --ochre:#DE8A5E; --ochre-bg:#33241B; --forest:#8DB59F; --forest-bg:#1E2B24;
+  --lake:#7DB9CF; --lake-bg:#18282E;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.3);
+  --bar:rgba(21,19,15,.92);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--f-body);font-size:18px;line-height:1.58;
+  -webkit-font-smoothing:antialiased;overscroll-behavior-y:none;
+}
+.wrap{max-width:780px;margin:0 auto;padding:0 16px 120px}
+h1,h2,h3,h4{font-family:var(--f-head);font-weight:700;margin:0;text-wrap:balance}
+p{margin:0 0 13px}
+p:last-child{margin-bottom:0}
+a{color:var(--ochre)}
+b{font-weight:650}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--ochre);outline-offset:3px}
+.micro{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;top:0;z-index:50;margin:0 -16px;
+  background:var(--bar);-webkit-backdrop-filter:saturate(180%) blur(14px);backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--hair);padding-top:env(safe-area-inset-top);
+}
+.bar-row{display:flex;align-items:center;gap:10px;padding:9px 16px 4px;min-height:44px}
+.bar .brand{font-family:var(--f-head);font-weight:700;font-size:18px}
+.net{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--forest-bg);color:var(--forest);white-space:nowrap}
+.net.off{background:var(--ochre-bg);color:var(--ochre)}
+.bar .sp{flex:1}
+.iconbtn{flex:none;width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--hair-2);
+  background:var(--surface);color:var(--ink);border-radius:11px;font-size:16px;cursor:pointer;padding:0}
+.chips{display:flex;gap:7px;padding:4px 16px 10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-size:15px;text-decoration:none;color:var(--ink);background:var(--surface);
+  border:1px solid var(--hair-2);border-radius:999px;padding:6px 14px;white-space:nowrap;transition:background .15s,color .15s}
+.chips a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding:26px 0 8px}
+.kicker{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin-bottom:12px;line-height:1.6}
+h1{font-size:clamp(44px,12vw,72px);line-height:1;letter-spacing:-.02em}
+.dek{margin-top:14px;font-size:17.5px;color:var(--muted);max-width:58ch}
+.count{margin-top:16px;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;
+  background:var(--ochre-bg);color:var(--ochre);border-radius:999px;padding:6px 14px}
+.weather{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.wt{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);padding:12px 12px 13px;box-shadow:var(--shadow)}
+.wt .l{font-size:13px;color:var(--muted);display:block}
+.wt .n{font-family:var(--f-head);font-size:28px;font-weight:700;line-height:1.1;display:block;margin-top:2px}
+.wt .s{font-size:12.5px;color:var(--muted);display:block;margin-top:3px;line-height:1.35}
+.wt.cave{background:var(--lake-bg);border-color:transparent}
+.wt.cave .n{color:var(--lake)}
+
+/* ---------- sections ---------- */
+section{padding-top:44px;scroll-margin-top:100px}
+.sh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--hair-2);padding-bottom:9px;margin-bottom:20px}
+.sh h2{font-size:28px;letter-spacing:-.01em;line-height:1.15}
+.sh .meta{margin-left:auto;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.lead{font-size:17px;color:var(--muted);margin-bottom:18px}
+.subprog{display:flex;align-items:center;gap:10px;margin:-6px 0 18px;font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.track{width:90px;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;flex:none}
+.track i{display:block;height:100%;background:var(--forest);width:0;border-radius:99px;transition:width .3s ease}
+
+/* ---------- cards ---------- */
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 18px 17px}
+.stack{display:grid;gap:10px}
+.facts{counter-reset:f;display:grid;gap:10px}
+.fact{counter-increment:f;display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}
+.fact::before{content:counter(f);font-family:var(--f-head);font-weight:700;font-size:20px;color:var(--ochre);
+  width:34px;height:34px;border-radius:50%;background:var(--ochre-bg);display:grid;place-items:center;line-height:1}
+.fact h3{font-size:19px;line-height:1.25;margin:3px 0 4px}
+.fact p{font-size:16.5px;color:var(--ink)}
+.note{border-radius:var(--r);padding:15px 17px;background:var(--ochre-bg);margin-top:16px}
+.note .lb{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);display:block;margin-bottom:5px}
+.note p{font-size:16.5px}
+.note.forest{background:var(--forest-bg)}
+.note.forest .lb{color:var(--forest)}
+.note.lake{background:var(--lake-bg)}
+.note.lake .lb{color:var(--lake)}
+
+/* ---------- checkbox ---------- */
+.tick{display:inline-flex;align-items:center;justify-content:center;flex:none;position:relative;
+  width:40px;height:40px;margin:-8px 0 -8px -9px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.tick input{position:absolute;opacity:0;width:40px;height:40px;margin:0;cursor:pointer}
+.tick i{width:25px;height:25px;border:1.5px solid var(--hair-2);border-radius:8px;background:var(--bg);
+  display:grid;place-items:center;transition:background .15s ease,border-color .15s ease}
+.tick i::after{content:"";width:12px;height:6px;border-left:2.2px solid var(--surface);border-bottom:2.2px solid var(--surface);
+  transform:rotate(-45deg) scale(.4);opacity:0;transition:opacity .15s ease,transform .15s ease;margin-top:-3px}
+.tick input:checked + i{background:var(--forest);border-color:var(--forest)}
+.tick input:checked + i::after{opacity:1;transform:rotate(-45deg) scale(1)}
+.tick input:focus-visible + i{outline:2px solid var(--ochre);outline-offset:2px}
+
+/* ---------- checklist items ---------- */
+.item{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--shadow);padding:13px 15px 14px}
+.item.done{background:var(--bg);box-shadow:none}
+.itop{display:flex;gap:10px;align-items:flex-start}
+.itop .t{flex:1;min-width:0}
+.itop .name{font-family:var(--f-head);font-weight:700;font-size:19px;line-height:1.22;display:block}
+.item.done .name{color:var(--muted)}
+.itop .sub{font-size:15.5px;color:var(--muted);display:block;margin-top:3px;line-height:1.45}
+.item .body{margin-left:31px;margin-top:8px;font-size:16.5px}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;padding:2px 8px;border-radius:999px;
+  background:var(--ochre-bg);color:var(--ochre);margin-left:6px;vertical-align:2px;font-family:var(--f-body)}
+.badge.forest{background:var(--forest-bg);color:var(--forest)}
+.item.done .badge{opacity:.55}
+.group{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);margin:24px 0 10px}
+.group:first-child{margin-top:0}
+
+/* ---------- accordion ---------- */
+details.acc{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+details.acc + details.acc{margin-top:10px}
+details.acc > summary{list-style:none;cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:12px;-webkit-tap-highlight-color:transparent}
+details.acc > summary::-webkit-details-marker{display:none}
+details.acc > summary .at{font-family:var(--f-head);font-weight:700;font-size:20px;line-height:1.2;flex:1}
+details.acc > summary .as{display:block;font-family:var(--f-body);font-weight:400;font-size:14.5px;color:var(--muted);margin-top:2px}
+details.acc > summary::after{content:"+";font-family:var(--f-mono);font-size:20px;color:var(--muted);flex:none}
+details.acc[open] > summary::after{content:"-"}
+details.acc[open] > summary{border-bottom:1px solid var(--hair)}
+.accb{padding:15px 18px 18px}
+.accb ul{margin:0;padding-left:20px}
+.accb li{margin-bottom:8px;font-size:16.5px}
+.accb li:last-child{margin-bottom:0}
+.accb p{font-size:16.5px}
+.kv{display:grid;gap:0;border-top:1px solid var(--hair)}
+.kv > div{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--hair);font-size:16px}
+.kv > div:last-child{border-bottom:none}
+.kv .k{font-size:14px;color:var(--muted);line-height:1.4;padding-top:1px}
+@media(max-width:440px){.kv > div{grid-template-columns:1fr;gap:2px}}
+
+/* ---------- timeline ---------- */
+.tl{position:relative;margin:4px 0 0;padding:0;list-style:none}
+.tl::before{content:"";position:absolute;left:52px;top:8px;bottom:8px;width:2px;background:var(--hair-2);border-radius:2px}
+.tl li{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:0 0 15px;position:relative}
+.tl li:last-child{padding-bottom:0}
+.tl li::after{content:"";position:absolute;left:47px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--ochre)}
+.tl li.key::after{background:var(--ochre)}
+.tl .y{font-family:var(--f-mono);font-size:14px;font-weight:600;color:var(--ochre);padding-top:2px;text-align:left}
+.tl .e{font-size:16px;line-height:1.5}
+
+/* ---------- day plan ---------- */
+.day{margin-bottom:18px}
+.day h3{font-size:21px;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
+.day h3 .dd{font-family:var(--f-mono);font-size:12px;font-weight:400;color:var(--muted);letter-spacing:.06em}
+.slot{display:grid;grid-template-columns:74px 1fr;gap:12px;background:var(--surface);border:1px solid var(--hair);
+  border-radius:var(--r);padding:13px 15px;box-shadow:var(--shadow)}
+.slot + .slot{margin-top:8px}
+.slot.now{border-color:var(--ochre);box-shadow:0 0 0 3px var(--ochre-bg),var(--shadow)}
+.slot .when{font-family:var(--f-mono);font-size:13px;color:var(--ochre);padding-top:3px;line-height:1.3}
+.slot .nowtag{display:none;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--bg);background:var(--ochre);border-radius:6px;padding:2px 6px;margin-top:6px;width:max-content}
+.slot.now .nowtag{display:block}
+.slot .what{font-size:16.5px}
+.slot .tip{display:block;font-size:14.5px;color:var(--muted);margin-top:4px}
+.slot .tip::before{content:"→ ";color:var(--forest)}
+
+/* ---------- tickets ---------- */
+.tickets{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tk{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);padding:12px 14px;box-shadow:var(--shadow)}
+.tk .l{font-size:13.5px;color:var(--muted);display:block;line-height:1.35}
+.tk .n{font-family:var(--f-head);font-size:24px;font-weight:700;display:block;margin-top:3px;line-height:1.15}
+.tk .s{font-size:13px;color:var(--muted);display:block;margin-top:2px}
+.tk.wide{grid-column:1 / -1}
+.checked{font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-top:8px;display:block}
+
+/* ---------- trails ---------- */
+.trail{display:grid;gap:3px}
+.trail .tn{font-family:var(--f-head);font-weight:700;font-size:18.5px}
+.trail .tm{font-family:var(--f-mono);font-size:12.5px;color:var(--forest)}
+.trail .td{font-size:16px;color:var(--ink)}
+
+/* ---------- contacts ---------- */
+.calls{display:grid;gap:8px}
+.call{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--hair);
+  border-radius:var(--r);padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);min-height:60px}
+.call:active{background:var(--surface-2)}
+.call .ci{flex:none;width:38px;height:38px;border-radius:50%;background:var(--forest-bg);color:var(--forest);display:grid;place-items:center;font-size:17px}
+.call.sos .ci{background:var(--ochre-bg);color:var(--ochre)}
+.call .cn{flex:1;font-size:16.5px;line-height:1.3}
+.call .cn small{display:block;font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-top:2px}
+.call .go{font-size:14px;font-weight:600;color:var(--forest)}
+.call.sos .go{color:var(--ochre)}
+
+.infra{display:grid;gap:10px}
+.inf{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);padding:13px 16px 14px;box-shadow:var(--shadow)}
+.inf .ik{font-family:var(--f-head);font-weight:700;font-size:18.5px;display:block;margin-bottom:4px}
+.inf .iv{font-size:16px}
+
+/* ---------- misc ---------- */
+.rules{margin:0;padding-left:20px}
+.rules li{margin-bottom:7px;font-size:16.5px}
+.srcs{font-size:14.5px;color:var(--muted);line-height:1.8;margin:0;padding-left:18px}
+.srcs li{margin-bottom:4px}
+.reset{margin-top:22px;background:none;border:1px solid var(--hair-2);border-radius:12px;color:var(--muted);
+  font:inherit;font-size:15px;padding:12px 14px;cursor:pointer;width:100%}
+.reset:active{background:var(--surface-2)}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--hair-2);font-family:var(--f-mono);font-size:11.5px;color:var(--muted);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media print{.bar,.reset,.tick{display:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="bar">
+    <div class="bar-row">
+      <span class="brand">Шульган-Таш</span>
+      <span class="net" id="net">онлайн</span>
+      <span class="sp"></span>
+      <button class="iconbtn" id="theme" aria-label="Сменить тему">◐</button>
+    </div>
+    <nav class="chips" id="chips">
+      <a href="#main">Главное</a>
+      <a href="#plan">План</a>
+      <a href="#visit">На месте</a>
+      <a href="#cave">Пещера</a>
+      <a href="#focus">Внимание</a>
+      <a href="#clothes">Сборы</a>
+      <a href="#infra">Быт</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="kicker">2-3 октября 2026 · пятница-суббота · Башкортостан</div>
+    <h1>Шульган-Таш</h1>
+    <p class="dek">Капова пещера с рисунками, которым около 20 тысяч лет, заповедник бурзянской пчелы и осенний лес над Белой. Всё, что нужно на месте, работает без сети.</p>
+    <div class="count" id="count">до поездки</div>
+
+    <div class="weather">
+      <div class="wt"><span class="l">Пятница</span><span class="n">+9°</span><span class="s">днём</span></div>
+      <div class="wt"><span class="l">Суббота</span><span class="n">+3°</span><span class="s">ночью 0° и ниже</span></div>
+      <div class="wt cave"><span class="l">В пещере</span><span class="n">+5...8°</span><span class="s">влажность 94-100%</span></div>
+    </div>
+  </header>
+
+  <!-- ================= ГЛАВНОЕ ================= -->
+  <section id="main">
+    <div class="sh"><h2>Главное</h2><span class="meta">в пяти пунктах</span></div>
+    <div class="facts">
+      <div class="fact card"><div>
+        <h3>Живопись палеолита</h3>
+        <p>Одна из двух пещер России с подлинными рисунками эпохи палеолита (вторая - Игнатиевская, Челябинская область) и самая богатая из них. Охрой нарисованы мамонты, лошади, носороги, бизоны, верблюд и загадочные трапеции.</p>
+      </div></div>
+      <div class="fact card"><div>
+        <h3>Всемирное наследие ЮНЕСКО</h3>
+        <p>С июля 2025 года, решение 47-й сессии Комитета в Париже.</p>
+      </div></div>
+      <div class="fact card"><div>
+        <h3>Примерно в 4 раза старше пирамид</h3>
+        <p>Возраст рисунков около 20-16 тысяч лет.</p>
+      </div></div>
+      <div class="fact card"><div>
+        <h3>Заповедник создан ради пчелы</h3>
+        <p>Здесь охраняют бурзянскую бортевую пчелу и бортничество - промысел, которому много сотен лет.</p>
+      </div></div>
+      <div class="fact card"><div>
+        <h3>Оригиналы не покажут</h3>
+        <p>На обычной экскурсии видны входной грот, первый зал и Голубое озеро. Точные копии рисунков - в музейном комплексе в 300 м от входа. Это нормально, настройся заранее.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ================= ПЛАН ================= -->
+  <section id="plan">
+    <div class="sh"><h2>План двух дней</h2><span class="meta">примерный</span></div>
+
+    <div class="day">
+      <h3>Пятница <span class="dd">2 октября · +9°</span></h3>
+      <div class="slot" data-day="2026-10-02" data-from="0" data-to="12">
+        <div><span class="when">утро</span><span class="nowtag">сейчас</span></div>
+        <div class="what">Выезд из Уфы, 6-7 часов в пути<span class="tip">в дорогу тёплая кофта, еда, повербанк</span></div>
+      </div>
+      <div class="slot" data-day="2026-10-02" data-from="12" data-to="18">
+        <div><span class="when">день</span><span class="nowtag">сейчас</span></div>
+        <div class="what">Заселение, экскурсия по тропе и в пещеру (старт в 13:00 или 15:00)<span class="tip">фонарь в кармане, одежда слоями</span></div>
+      </div>
+      <div class="slot" data-day="2026-10-02" data-from="18" data-to="24">
+        <div><span class="when">вечер</span><span class="nowtag">сейчас</span></div>
+        <div class="what">Ужин, прогулка у реки, звёздное небо без засветки<span class="tip">после заката очень холодно: шапка</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <h3>Суббота <span class="dd">3 октября · +3°</span></h3>
+      <div class="slot" data-day="2026-10-03" data-from="0" data-to="12">
+        <div><span class="when">утро</span><span class="nowtag">сейчас</span></div>
+        <div class="what">+3°, возможен туман над Белой<span class="tip">лучший свет для фото долины</span></div>
+      </div>
+      <div class="slot" data-day="2026-10-03" data-from="12" data-to="24">
+        <div><span class="when">день</span><span class="nowtag">сейчас</span></div>
+        <div class="what">Музейный комплекс (если не успели), пасека, сувениры, выезд<span class="tip">мёд покупать у заповедника</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= НА МЕСТЕ ================= -->
+  <section id="visit">
+    <div class="sh"><h2>На месте</h2><span class="meta">экотропа 4,4 км</span></div>
+    <p class="lead">Основной формат - экскурсия по тропе «Земля заповедная» с заходом в пещеру: кольцо 4,4 км, около 3 часов, без подготовки. Автобус остаётся у КПП, до пещеры около 2 км пешком.</p>
+
+    <div class="tickets">
+      <div class="tk"><span class="l">Взрослый билет</span><span class="n">340 ₽</span><span class="s">будни · 440 ₽ в выходные</span></div>
+      <div class="tk"><span class="l">Дети 9-16 лет</span><span class="n">-50%</span><span class="s">с документом · до 8 лет бесплатно</span></div>
+      <div class="tk"><span class="l">Старты экскурсий</span><span class="n">11 · 13 · 15 · 17</span><span class="s">осенний режим, сверить на месте</span></div>
+      <div class="tk"><span class="l">На территории</span><span class="n">до 19:00</span><span class="s">экскурсия 3 ч, группа до 25</span></div>
+      <div class="tk wide"><span class="l">Музейный комплекс</span><span class="n">~300 ₽</span><span class="s">отдельная экскурсия, группы каждые 30 минут; 10:00-18:00</span></div>
+    </div>
+    <span class="checked">цены проверены 27.09.2026 · билеты действуют с 21.08.2026</span>
+
+    <div class="note forest">
+      <span class="lb">Билет не выбрасывать</span>
+      <p>Он даёт проход в оба музея, на пасеку, смотровые площадки и в пещеру. Отдельно платные только фиточай и тропа на Тирментау.</p>
+    </div>
+
+    <div class="group" style="margin-top:28px">Маршрут по точкам</div>
+    <div class="subprog"><span class="track"><i id="rtrack"></i></span><span id="rtext">0 из 7</span></div>
+    <div class="stack">
+      <div class="item" id="r1">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r1"><i></i></label>
+          <span class="t"><span class="name">Колодная пасека</span><span class="sub">колоды и борти, бурзянская пчела; можно купить мёд и фиточай</span></span></div>
+      </div>
+      <div class="item" id="r2">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r2"><i></i></label>
+          <span class="t"><span class="name">Музей бортевого пчеловодства</span><span class="sub">инструменты бортевиков, кирама - пояс для подъёма на дерево, тамги - родовые знаки на бортях</span></span></div>
+      </div>
+      <div class="item" id="r3">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r3"><i></i></label>
+          <span class="t"><span class="name">Музей Каповой пещеры</span><span class="sub">на тропе: находки, схема этажей пещеры</span></span></div>
+      </div>
+      <div class="item" id="r4">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r4"><i></i></label>
+          <span class="t"><span class="name">Стоянка древнего человека</span><span class="sub">реконструкция</span></span></div>
+      </div>
+      <div class="item" id="r5">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r5"><i></i></label>
+          <span class="t"><span class="name">Смотровые площадки</span><span class="sub">виды на долину Белой и скалы; лучшие фото в ясную погоду</span></span></div>
+      </div>
+      <div class="item" id="r6">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r6"><i></i></label>
+          <span class="t"><span class="name">Пещера <span class="badge">нужен фонарь</span></span><span class="sub">входная арка, Голубое озеро, первый (Купольный) зал, копия рисунков у входа. Освещения внутри почти нет</span></span></div>
+      </div>
+      <div class="item" id="r7">
+        <div class="itop"><label class="tick"><input type="checkbox" class="rt" data-id="r7"><i></i></label>
+          <span class="t"><span class="name">Музейный комплекс «Шульган-Таш» <span class="badge forest">главное</span></span><span class="sub">в 300 м от входа, открыт в 2022 году. Точные копии рисунков в натуральную величину - крупнейший музей наскального искусства в России</span></span></div>
+        <div class="body">7 блоков: «Таймлайн», «Медиазал», «Наскальное искусство», «Археология», «Естественно-научный», «Сохранение», «Эпос Урал-батыр». Режим 10:00-18:00, по одному источнику выходной понедельник.</div>
+      </div>
+    </div>
+
+    <div class="group" style="margin-top:28px">Другие тропы заповедника</div>
+    <div class="stack">
+      <div class="card trail"><span class="tn">На гору Тирментау</span><span class="tm">2,4 км · 2 ч · вершина 436 м</span><span class="td">Виды на Белую. Сезон 15 мая - 31 октября, до 9 человек в день, только с инспектором, рифлёная обувь обязательна. Для класса вряд ли, но спросить можно.</span></div>
+      <div class="card trail"><span class="tn">«В ожидании чуда», «Скалы над пасекой»</span><span class="tm">запись за 2 дня</span><span class="td">Малые группы: до 25 и до 12 человек.</span></div>
+      <div class="card trail"><span class="tn">«В древнейшей картинной галерее»</span><span class="tm">2,4 км · 3 ч под землёй · 14+</span><span class="td">Единственный путь к оригиналам рисунков. До 5 человек в день, каска, налобный фонарь, перчатки. Порядка 8-9 тыс. ₽ (уточнять) - для школьной группы практически недоступно.</span></div>
+    </div>
+  </section>
+
+  <!-- ================= ПЕЩЕРА ================= -->
+  <section id="cave">
+    <div class="sh"><h2>Капова пещера</h2><span class="meta">почему уникальна</span></div>
+
+    <details class="acc">
+      <summary><span class="at">Где это и что это<span class="as">расположение, заповедник, название</span></span></summary>
+      <div class="accb">
+        <div class="kv">
+          <div><span class="k">Где</span><span>Бурзянский район Башкортостана, западные предгорья Южного Урала, правый берег Белой (Агидели)</span></div>
+          <div><span class="k">Рядом</span><span>д. Иргизлы, д. Гадельгареево; райцентр Старосубхангулово примерно в 36 км; д. Мраково в 68 км</span></div>
+          <div><span class="k">От Уфы</span><span>около 360-400 км, на автобусе 6-7 часов с остановками</span></div>
+          <div><span class="k">Заповедник</span><span>с 1958 года как филиал Башкирского, самостоятельный с 1986-го; 22 531 га - самый маленький заповедник Урала</span></div>
+          <div><span class="k">Статусы</span><span>пещера - объект культурного наследия федерального значения и (с 2025) Всемирного наследия ЮНЕСКО; заповедник входит в биосферный резерват ЮНЕСКО «Башкирский Урал»</span></div>
+          <div><span class="k">Название</span><span>по-башкирски примерно «камень Шульгана» - персонажа эпоса «Урал-батыр». Русское «Капова» возводят к «капищу» (святилище) или к капающей со свода воде</span></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary><span class="at">Устройство<span class="as">три этажа, залы, подземная река</span></span></summary>
+      <div class="accb">
+        <ul>
+          <li>Карстовая пещера в известняках, исследовано более 3 км ходов (по разным источникам 3,3-3,9 км, включая затопленные участки).</li>
+          <li><b>Три этажа разного возраста.</b> Средний - самый древний, порядка 3 млн лет; верхний около 1,5 млн лет; нижний самый молодой, его до сих пор вырабатывает подземная река Шульган.</li>
+          <li><b>Входная арка</b> огромная: высота около 20 м, ширина несколько десятков метров. Один из самых фотогеничных видов места.</li>
+          <li>Крупные залы: Купольный, Зал Хаоса, Зал Рисунков, Бриллиантовый, Хрустальный. Есть сталагмит высотой около 3 м при диаметре основания до 8 м.</li>
+        </ul>
+        <div class="note lake">
+          <span class="lb">Голубое озеро</span>
+          <p>Река Шульган уходит под землю в карстовую воронку примерно в 2,5 км севернее, течёт внутри горы и выходит у пещеры из Голубого озера (Сакрального источника). Диаметр всего около 3 м, глубина более 80 м (по данным РГО - 84 м). Вода правда голубая. Купаться нельзя.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary><span class="at">Рисунки<span class="as">что, сколько, чем и когда</span></span></summary>
+      <div class="accb">
+        <div class="kv">
+          <div><span class="k">Сколько</span><span>около 195-200 изображений; хорошо сохранились лишь несколько десятков - в Зале Рисунков и Зале Знаков, на среднем и верхнем этажах</span></div>
+          <div><span class="k">Возраст</span><span>по досье ЮНЕСКО 20,6-16,5 тыс. лет (верхний палеолит). Уран-ториевые датировки 2013-2014 гг. дали 14-19 тыс. лет, угли из раскопок - около 19 тыс.</span></div>
+          <div><span class="k">Сюжеты</span><span>мамонты (их больше всего), лошади, шерстистые носороги, бизоны, двугорбый верблюд (найден в 2017 г.), человекоподобные фигуры, геометрические знаки: трапеции, «лесенки», треугольники</span></div>
+          <div><span class="k">Техника</span><span>красная охра (минеральный пигмент) с органическим связующим, отдельные контуры углём; фигуры примерно от 40 см до метра с лишним</span></div>
+          <div><span class="k">Своеобразие</span><span>трапециевидные знаки почти не встречаются во Франции и Испании - исследователи говорят о самостоятельном южноуральском центре палеолитического искусства</span></div>
+          <div><span class="k">Археология</span><span>каменные орудия, охра, угли, украшения из раковин (часть привезена из Прикаспия); культурному слою 15-17 тыс. лет. Верблюд и ракушки говорят о дальних связях людей палеолита</span></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary><span class="at">История открытия<span class="as">от Рычкова до ЮНЕСКО</span></span></summary>
+      <div class="accb">
+        <ol class="tl">
+          <li><span class="y">1760</span><span class="e">Первое научное описание: Пётр Рычков, Оренбургская экспедиция</span></li>
+          <li><span class="y">1770</span><span class="e">Пещеру описывает академик Иван Лепёхин в ходе академических экспедиций</span></li>
+          <li><span class="y">1896</span><span class="e">Топографическая съёмка: Д. Соколов, И. Заневский, Ф. Симон</span></li>
+          <li class="key"><span class="y">1959</span><span class="e"><b>Зоолог заповедника Александр Рюмин находит изображения мамонтов.</b> Сенсация: считалось, что пещерная живопись палеолита есть только во франко-кантабрийской области</span></li>
+          <li><span class="y">1960</span><span class="e">Экспедиция Отто Бадера (Институт археологии АН СССР) подтверждает подлинность; Бадер ведёт работы до 1978 года</span></li>
+          <li><span class="y">1982</span><span class="e">Начало раскопок Вячеслава Щелинского (ЛО ИА, ныне ИИМК РАН), датировки культурного слоя</span></li>
+          <li><span class="y">2017</span><span class="e">Найдено изображение двугорбого верблюда</span></li>
+          <li><span class="y">2022</span><span class="e">Открыт музейный комплекс «Шульган-Таш» с точными копиями рисунков</span></li>
+          <li class="key"><span class="y">2025</span><span class="e"><b>Включение в Список всемирного наследия ЮНЕСКО</b></span></li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary><span class="at">Почему оригиналы закрыты<span class="as">дыхание разрушает рисунки</span></span></summary>
+      <div class="accb">
+        <p>Рисунки разрушаются от дыхания людей и изменения микроклимата: тепло, углекислый газ и влага ускоряют рост кальцитовой корки. Поэтому в Зал Рисунков массово не пускают, а в сезон действует норматив не более 1200 человек в сутки.</p>
+        <p>К оригиналам ведёт только спецмаршрут «В древнейшей картинной галерее»: 2,4 км под землёй, около 3 часов, 14+, не больше 5 человек в день.</p>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary><span class="at">Легенды<span class="as">Шульген, посох, капище</span></span></summary>
+      <div class="accb">
+        <ul>
+          <li>В эпосе «Урал-батыр» Шульген - старший брат героя Урала, который выбрал зло и стал владыкой подземных и подводных сил. Пещеру считают его дворцом, а Голубое озеро и уходящую под землю реку - входом в его царство.</li>
+          <li>По местному преданию, озеро образовалось, когда подземный владыка ударил о землю посохом.</li>
+          <li>Версия о «капище»: пещеру в древности почитали как святилище. Археологи действительно находят следы ритуальной деятельности.</li>
+          <li>В музейном комплексе эпосу «Урал-батыр» посвящён отдельный блок.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= ВНИМАНИЕ ================= -->
+  <section id="focus">
+    <div class="sh"><h2>Обратить внимание</h2><span class="meta">отмечай увиденное</span></div>
+    <div class="subprog"><span class="track"><i id="ftrack"></i></span><span id="ftext">0 из 6</span></div>
+
+    <div class="stack">
+      <div class="item" id="f1"><div class="itop"><label class="tick"><input type="checkbox" class="fc" data-id="f1"><i></i></label>
+        <span class="t"><span class="name">Масштаб входной арки</span><span class="sub">сфотографировать людей на её фоне, чтобы передать размер</span></span></div></div>
+      <div class="item" id="f2"><div class="itop"><label class="tick"><input type="checkbox" class="fc" data-id="f2"><i></i></label>
+        <span class="t"><span class="name">Цвет Голубого озера</span><span class="sub">и то, что это выход подземной реки с глубины более 80 м</span></span></div></div>
+      <div class="item" id="f3"><div class="itop"><label class="tick"><input type="checkbox" class="fc" data-id="f3"><i></i></label>
+        <span class="t"><span class="name">Копии рисунков</span><span class="sub">найти мамонтов, лошадь, верблюда и трапеции. Сравнить с Ласко и Альтамирой: там полихромия, здесь только охра и уголь, зато свои геометрические знаки</span></span></div></div>
+      <div class="item" id="f4"><div class="itop"><label class="tick"><input type="checkbox" class="fc" data-id="f4"><i></i></label>
+        <span class="t"><span class="name">Тамги на бортях</span><span class="sub">родовые знаки бортевиков - живая связь с историей башкирских родов (бурзян), кочевой и лесной традицией</span></span></div></div>
+      <div class="item" id="f5"><div class="itop"><label class="tick"><input type="checkbox" class="fc" data-id="f5"><i></i></label>
+        <span class="t"><span class="name">Смена экосистем</span><span class="sub">широколиственный лес (липа, дуб, клён) и горная тайга, известняковые скалы над Белой. В начале октября листва на пике осенних цветов</span></span></div></div>
+      <div class="item" id="f6"><div class="itop"><label class="tick"><input type="checkbox" class="fc" data-id="f6"><i></i></label>
+        <span class="t"><span class="name">Животные</span><span class="sub">лось, косуля, кабан, рысь, бурый медведь; из птиц беркут, орлан-белохвост, скопа; в реке хариус и таймень</span></span></div></div>
+    </div>
+
+    <div class="note">
+      <span class="lb">Медведь и правила</span>
+      <p>Осенью медведь активен перед спячкой: с тропы не сходить, от группы не отставать, еду не оставлять.</p>
+      <ul class="rules" style="margin-top:8px">
+        <li>только по экотропе, не шуметь, ничего не рвать и не собирать</li>
+        <li>в пещере не трогать стены</li>
+        <li>на скульптуры не лазить - штраф 3000-4000 ₽</li>
+        <li>алкоголь запрещён, животных провозить нельзя</li>
+      </ul>
+    </div>
+
+    <div class="group" style="margin-top:28px">Вопросы гиду</div>
+    <div class="subprog"><span class="track"><i id="qtrack"></i></span><span id="qtext">0 из 4</span></div>
+    <div class="stack">
+      <div class="item" id="q1"><div class="itop"><label class="tick"><input type="checkbox" class="qs" data-id="q1"><i></i></label>
+        <span class="t"><span class="name" style="font-size:17.5px">Как отличают подлинные палеолитические рисунки от поздних и как датируют охру?</span></span></div></div>
+      <div class="item" id="q2"><div class="itop"><label class="tick"><input type="checkbox" class="qs" data-id="q2"><i></i></label>
+        <span class="t"><span class="name" style="font-size:17.5px">Что сейчас известно о трапециевидных знаках: символы, «жилища», ловушки?</span></span></div></div>
+      <div class="item" id="q3"><div class="itop"><label class="tick"><input type="checkbox" class="qs" data-id="q3"><i></i></label>
+        <span class="t"><span class="name" style="font-size:17.5px">Есть ли следы ритуалов и что значат найденные черепа без скелетов?</span></span></div></div>
+      <div class="item" id="q4"><div class="itop"><label class="tick"><input type="checkbox" class="qs" data-id="q4"><i></i></label>
+        <span class="t"><span class="name" style="font-size:17.5px">Как соотносятся древние обитатели пещеры и башкирский эпос: реальная преемственность или поздняя сакрализация места?</span></span></div></div>
+    </div>
+    <details class="acc" style="margin-top:12px">
+      <summary><span class="at" style="font-size:17px">Записать ответы</span></summary>
+      <div class="accb"><textarea id="answers" style="width:100%;min-height:120px;padding:12px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink);border:1px solid var(--hair-2);border-radius:10px;resize:vertical" placeholder="что сказал гид"></textarea></div>
+    </details>
+  </section>
+
+  <!-- ================= СБОРЫ ================= -->
+  <section id="clothes">
+    <div class="sh"><h2>Сборы</h2><span class="meta">+9 днём, 0 ночью</span></div>
+    <div class="subprog"><span class="track"><i id="ptrack"></i></span><span id="ptext">0 из 20</span></div>
+
+    <div class="note" style="margin-top:0;margin-bottom:20px">
+      <span class="lb">Принцип</span>
+      <p>Три слоя и сухая смена. Днём на тропе прохладно, в пещере +5...+8° и сыро, ночью около нуля. Самая частая ошибка туристов - <b>лёгкая обувь и отсутствие фонаря</b>.</p>
+    </div>
+
+    <div class="group">Одежда</div>
+    <div class="stack">
+      <div class="item" id="p1"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p1"><i></i></label>
+        <span class="t"><span class="name">Термобельё или синтетика с длинным рукавом</span><span class="sub">не хлопок: он намокает от пота и сырости пещеры и холодит</span></span></div></div>
+      <div class="item" id="p2"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p2"><i></i></label>
+        <span class="t"><span class="name">Флиска или тёплый свитер</span><span class="sub">второй слой</span></span></div></div>
+      <div class="item" id="p3"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p3"><i></i></label>
+        <span class="t"><span class="name">Лёгкий пуховик или утеплённая куртка</span><span class="sub">+3° утром в субботу</span></span></div></div>
+      <div class="item" id="p4"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p4"><i></i></label>
+        <span class="t"><span class="name">Непромокаемая ветровка с капюшоном</span><span class="sub">дождь, ветер у реки, капель в гроте</span></span></div></div>
+      <div class="item" id="p5"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p5"><i></i></label>
+        <span class="t"><span class="name">Плотные штаны</span><span class="sub">не джинсы, если обещают дождь</span></span></div></div>
+      <div class="item" id="p6"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p6"><i></i></label>
+        <span class="t"><span class="name">Ботинки с рифлёной подошвой <span class="badge">обязательно</span></span><span class="sub">треккинговые или кроссовки, лучше непромокаемые: мокрые камни, трапы, глина в пещере</span></span></div></div>
+      <div class="item" id="p7"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p7"><i></i></label>
+        <span class="t"><span class="name">Шапка и перчатки</span><span class="sub">тонкие рабочие тоже подойдут: поручни в пещере холодные и мокрые</span></span></div></div>
+      <div class="item" id="p8"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p8"><i></i></label>
+        <span class="t"><span class="name">Носки, 2-3 пары</span><span class="sub">одна шерстяная для сна; сухие ноги - это тепло</span></span></div></div>
+      <div class="item" id="p9"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p9"><i></i></label>
+        <span class="t"><span class="name">Тёплая одежда для ночёвки</span><span class="sub">если домик без отопления - спальник с комфортом около 0°. Уточни у учителя, где ночуете</span></span></div></div>
+    </div>
+
+    <div class="group">В рюкзак</div>
+    <div class="stack">
+      <div class="item" id="p10"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p10"><i></i></label>
+        <span class="t"><span class="name">Налобный фонарь + запасные батарейки <span class="badge">обязательно</span></span><span class="sub">в пещере освещения почти нет</span></span></div></div>
+      <div class="item" id="p11"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p11"><i></i></label>
+        <span class="t"><span class="name">Повербанк, заряженный телефон</span><span class="sub">и офлайн-карта, скачанная заранее</span></span></div></div>
+      <div class="item" id="p12"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p12"><i></i></label>
+        <span class="t"><span class="name">Вода 0,5-1 л и перекус</span><span class="sub">орехи, батончики; кафе в межсезонье могут не работать</span></span></div></div>
+      <div class="item" id="p13"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p13"><i></i></label>
+        <span class="t"><span class="name">Термос с чаем</span></span></div></div>
+      <div class="item" id="p14"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p14"><i></i></label>
+        <span class="t"><span class="name">Наличные</span><span class="sub">мёд, чай, сувениры: карты и переводы работают не везде</span></span></div></div>
+      <div class="item" id="p15"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p15"><i></i></label>
+        <span class="t"><span class="name">Документ о возрасте</span><span class="sub">для скидки 50% детям 9-16 лет</span></span></div></div>
+      <div class="item" id="p16"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p16"><i></i></label>
+        <span class="t"><span class="name">Дождевик или чехол для рюкзака</span></span></div></div>
+      <div class="item" id="p17"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p17"><i></i></label>
+        <span class="t"><span class="name">Пакет для мокрой обуви и пакет для мусора</span></span></div></div>
+      <div class="item" id="p18"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p18"><i></i></label>
+        <span class="t"><span class="name">Аптечка и таблетки от укачивания</span><span class="sub">последние 36-48 км дороги грунтовые; если укачивает, садись вперёд</span></span></div></div>
+      <div class="item" id="p19"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p19"><i></i></label>
+        <span class="t"><span class="name">Влажные салфетки</span></span></div></div>
+      <div class="item" id="p20"><div class="itop"><label class="tick"><input type="checkbox" class="pk" data-id="p20"><i></i></label>
+        <span class="t"><span class="name">Репеллент от клещей</span><span class="sub">при +3...+9° клещи почти неактивны, но в тёплый полдень могут встретиться; заповедник территорию не обрабатывает</span></span></div></div>
+    </div>
+  </section>
+
+  <!-- ================= БЫТ ================= -->
+  <section id="infra">
+    <div class="sh"><h2>Быт и связь</h2><span class="meta">как на самом деле</span></div>
+
+    <div class="group">Экстренные звонки</div>
+    <div class="calls">
+      <a class="call sos" href="tel:112"><span class="ci">!</span><span class="cn">Единая служба спасения<small>112</small></span><span class="go">позвонить</span></a>
+      <a class="call" href="tel:+73475531500"><span class="ci">☎</span><span class="cn">Дежурный заповедника<small>+7 (347) 553-15-00</small></span><span class="go">позвонить</span></a>
+      <a class="call" href="tel:+73475533500"><span class="ci">☎</span><span class="cn">КПП<small>+7 (34755) 3-35-00</small></span><span class="go">позвонить</span></a>
+      <a class="call" href="tel:+79273181947"><span class="ci">☎</span><span class="cn">Размещение<small>+7 (927) 318-19-47</small></span><span class="go">позвонить</span></a>
+    </div>
+
+    <div class="group" style="margin-top:28px">Что ждать</div>
+    <div class="infra">
+      <div class="inf"><span class="ik">Связь</span><span class="iv">Покрытие около 70% (МегаФон, МТС, Yota). В пещере и на части тропы связи нет, мобильный интернет слабый. Офлайн-карты скачать заранее.</span></div>
+      <div class="inf"><span class="ik">Дорога</span><span class="iv">Последние 36-48 км грунтовые или с плохим покрытием, со стороны Старосубхангулово или Мраково: трясёт, пыльно, после дождя грязно. Участок Старосубхангулово-Мраково ремонтируют до конца 2027 года.</span></div>
+      <div class="inf"><span class="ik">Жильё на территории</span><span class="iv">Гостевые дома на 2-10 человек (плитка, чайник, СВЧ, холодильник), 650-2200 ₽ с человека за ночь; дом-кемпер; стоянки с кострищами. Часть простых домиков без отопления.<span class="checked">цены на 27.09.2026</span></span></div>
+      <div class="inf"><span class="ik">Жильё рядом</span><span class="iv">Турбазы и гостевые дома в Иргизлы и Гадельгареево (например, «Капова-Тур» примерно в 20 км), часто с ужином и завтраком из башкирской кухни.</span></div>
+      <div class="inf"><span class="ik">Еда</span><span class="iv">Кафе у пещеры рассчитаны на организованные группы и в межсезонье могут работать сокращённо. Воду и перекус брать на день. В ближайших деревнях есть магазины, но выбор скромный.</span></div>
+      <div class="inf"><span class="ik">Туалеты</span><span class="iv">Оборудованы на территории музейно-экскурсионного комплекса и стоянок.</span></div>
+      <div class="inf"><span class="ik">Деньги</span><span class="iv">Брать наличные: в глубинке карты и переводы работают не везде, особенно у частных продавцов мёда.</span></div>
+      <div class="inf"><span class="ik">Сувениры</span><span class="iv">Магазин заповедника: бурзянский мёд, травяные чаи, печатная продукция.</span></div>
+    </div>
+  </section>
+
+  <!-- ================= ДАННЫЕ ================= -->
+  <section id="data">
+    <div class="sh"><h2>Насколько это точно</h2><span class="meta">досье от 27.09.2026</span></div>
+    <details class="acc">
+      <summary><span class="at" style="font-size:18px">Надёжность данных<span class="as">что проверено, что расходится</span></span></summary>
+      <div class="accb">
+        <p><b>Проверено по официальным источникам:</b> цены с 21.08.2026, правила, паспорта маршрутов, статус ЮНЕСКО, контакты.</p>
+        <p><b>Расходится между источниками:</b> длина пещеры (3,3-3,9 км), размер арки, возраст рисунков (от 14 до 20,6 тыс. лет), число изображений (170-204). Даны диапазоны, в приоритете досье ЮНЕСКО и РГО.</p>
+        <p><b>Не подтверждено на осень 2026:</b> точные часы стартов экскурсий, работа кафе, выходной день музейного комплекса, цена спецмаршрута.</p>
+      </div>
+    </details>
+    <details class="acc">
+      <summary><span class="at" style="font-size:18px">Источники</span></summary>
+      <div class="accb">
+        <ul class="srcs">
+          <li>Официальный сайт заповедника shulgan-tash.ru: памятка, советы, паспорта маршрутов 2025, размещение</li>
+          <li>UFA1.ру, 21.08.2026: новые цены на экскурсии</li>
+          <li>РГО: «Древние рисунки пещеры Шульган-Таш стали объектом Всемирного наследия ЮНЕСКО»; «Шульган-Таш: затерянный мир в Уральских горах»</li>
+          <li>Элементы.ру: «О Каповой пещере (Шульган-Таш), уникальном памятнике культуры и природы»</li>
+          <li>Институт археологии РАН: открытие музейного комплекса «Шульган-Таш» (2022)</li>
+          <li>Википедия: «Шульган-Таш (заповедник)»; Ураловед: «Пещера Капова»; Наш Урал</li>
+          <li>Комсомольская правда, Tonkosti, TravelAsk; Kumertime, 25.08.2026: ремонт дороги</li>
+        </ul>
+      </div>
+    </details>
+    <button class="reset" id="reset">Сбросить все отметки и заметки</button>
+  </section>
+
+  <footer>
+    <span>Шульган-Таш · 2-3 октября 2026</span>
+    <span id="offline">офлайн-режим: готовится</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY = 'shulgan-tash-2026';
+  var S = {c:{}, a:''};
+  try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); S.c = p.c || {}; S.a = p.a || ''; } } catch(e){}
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function plural(n, one, few, many){
+    var m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return one;
+    if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+    return many;
+  }
+
+  /* ---- theme ---- */
+  var root = document.documentElement;
+  function isDark(){
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  document.getElementById('theme').addEventListener('click', function(){
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('st-theme', next); } catch(e){}
+  });
+
+  /* ---- checkboxes ---- */
+  var boxes = document.querySelectorAll('input[type=checkbox][data-id]');
+  Array.prototype.forEach.call(boxes, function(b){
+    b.checked = !!S.c[b.dataset.id];
+    b.addEventListener('change', function(){
+      if (b.checked) S.c[b.dataset.id] = Date.now(); else delete S.c[b.dataset.id];
+      save(); render();
+    });
+  });
+
+  var ans = document.getElementById('answers');
+  ans.value = S.a;
+  if (S.a) ans.closest('details').open = true;
+  ans.addEventListener('input', function(){ S.a = ans.value; save(); });
+
+  function fill(trackId, textId, sel){
+    var els = document.querySelectorAll(sel), done = 0;
+    Array.prototype.forEach.call(els, function(e){ if (e.checked) done++; });
+    document.getElementById(trackId).style.width = (els.length ? Math.round(done/els.length*100) : 0) + '%';
+    document.getElementById(textId).textContent = done + ' из ' + els.length;
+  }
+
+  function render(){
+    Array.prototype.forEach.call(boxes, function(b){
+      var host = b.closest('.item');
+      if (host) host.classList.toggle('done', b.checked);
+    });
+    fill('rtrack','rtext','.rt');
+    fill('ftrack','ftext','.fc');
+    fill('qtrack','qtext','.qs');
+    fill('ptrack','ptext','.pk');
+  }
+
+  /* ---- countdown and plan ---- */
+  function tick(){
+    var d = new Date();
+    var today = d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate());
+    var start = new Date(2026, 9, 2), end = new Date(2026, 9, 3);
+    var mid = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    var days = Math.round((start - mid) / 86400000);
+    var c = document.getElementById('count');
+    if (days > 0) c.textContent = 'до поездки ' + days + ' ' + plural(days,'день','дня','дней');
+    else if (today === '2026-10-02') c.textContent = 'сегодня день первый';
+    else if (today === '2026-10-03') c.textContent = 'сегодня день второй';
+    else c.textContent = 'поездка позади';
+
+    var h = d.getHours();
+    Array.prototype.forEach.call(document.querySelectorAll('.slot'), function(s){
+      var on = s.dataset.day === today && h >= +s.dataset.from && h < +s.dataset.to;
+      s.classList.toggle('now', on);
+    });
+  }
+
+  /* ---- network ---- */
+  function net(){
+    var n = document.getElementById('net');
+    if (navigator.onLine){ n.textContent = 'онлайн'; n.className = 'net'; }
+    else { n.textContent = 'без сети'; n.className = 'net off'; }
+  }
+  window.addEventListener('online', net);
+  window.addEventListener('offline', net);
+
+  /* ---- nav highlight ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#chips a'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function spy(){
+    var y = window.scrollY + 130, cur = 0;
+    secs.forEach(function(s, i){ if (s && s.offsetTop <= y) cur = i; });
+    links.forEach(function(a, i){ a.classList.toggle('on', i === cur); });
+    var on = links[cur];
+    if (on && on.dataset.shown !== '1'){
+      links.forEach(function(a){ a.dataset.shown = ''; });
+      on.dataset.shown = '1';
+      var box = document.getElementById('chips');
+      box.scrollTo({ left: on.offsetLeft - 16, behavior: 'smooth' });
+    }
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (!ticking){ ticking = true; requestAnimationFrame(function(){ spy(); ticking = false; }); }
+  }, { passive: true });
+
+  /* ---- reset ---- */
+  document.getElementById('reset').addEventListener('click', function(){
+    if (confirm('Снять все отметки и стереть заметки?')){
+      S = {c:{}, a:''}; save();
+      Array.prototype.forEach.call(boxes, function(b){ b.checked = false; });
+      ans.value = '';
+      render();
+    }
+  });
+
+  render(); tick(); net(); spy();
+  setInterval(tick, 60000);
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) tick(); });
+
+  /* ---- offline ---- */
+  var off = document.getElementById('offline');
+  var secure = location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  if ('serviceWorker' in navigator && secure){
+    navigator.serviceWorker.register('sw.js').then(function(){
+      return navigator.serviceWorker.ready;
+    }).then(function(){ off.textContent = 'работает без сети ✓'; })
+      .catch(function(){ off.textContent = 'офлайн-режим недоступен'; });
+  } else {
+    off.textContent = 'откройте по ссылке для офлайна';
+  }
+})();
+</script>
+</body>
+</html>
